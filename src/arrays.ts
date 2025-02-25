@@ -30,7 +30,7 @@ export function tripleNumbers(numbers: number[]): number[] {
  */
 export function stringsToIntegers(numbers: string[]): number[] {
     return numbers.map((value: string): number => {
-        if (+value === undefined || isNaN(+value)) {
+        if (typeof +value === "undefined" || isNaN(+value)) {
             return 0;
         } else {
             return +value;
@@ -50,7 +50,7 @@ export const removeDollars = (amounts: string[]): number[] => {
         if (value[0] === "$") {
             value = value.slice(1);
         }
-        if (+value === undefined || isNaN(+value)) {
+        if (typeof +value === "undefined" || isNaN(+value)) {
             return 0;
         } else {
             return +value;
